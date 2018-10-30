@@ -2,15 +2,12 @@
 <p>Start working on it right now!</p>
 
 <% @tasks.each do |t| %>
-
-<h2><%= t.title %></h2>
   <div>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value=""   <%= "checked" if t.completed == true %> id="defaultCheck1">
       <label class="form-check-label" for="defaultCheck1">
-        <%= t.details %>
+        <%= link_to t.title, tasks_path(t) %>
       </label>
-
     </div>
   </div>
 <% end %>
