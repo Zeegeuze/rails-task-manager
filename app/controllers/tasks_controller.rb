@@ -35,7 +35,7 @@ end
 private
 
 def task_params
-  params.require(:task).permit(:title, :details)
+  params.require(:task).permit(:title, :details, :completed)
 end
 
 def set_task

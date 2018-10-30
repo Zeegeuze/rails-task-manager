@@ -2,10 +2,11 @@
   <h1><%= @task.title %></h1>
 </div>
 
-<%= link_to "Edit this task", tasks_path %>
+<div class="btn btn-warning">
+<%= link_to "Edit this task", edit_path(@task) %>
+</div>
 
-
-<div class="bg-secondary text-white">
+<div>
 <%= @task.details %>
 </div>
 
